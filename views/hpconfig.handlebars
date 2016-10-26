@@ -7,6 +7,7 @@
     <link href="/css/bootstrap.min.css" rel="stylesheet">
     <link href="/css/bootstrap-theme.min.css" rel="stylesheet">
     <link href="/css/introHCI.css" rel="stylesheet">
+    <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/pure-min.css">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -15,30 +16,62 @@
       <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
     <![endif]-->
   </head>
+
   <body>
 	<!-- this is a comment in HTML -->
-	<div class="container">
-		<div class="jumbotron">
-  			<h1>HP Config</h1>
-  			<p>one-sentence description of project</p>
-		</div>
+	<div>
+    <header>
+    <button class="hamburger">&#9776;</button>
+    <button class="cross">&#735;</button>
+    </header>
 
-		<div>
-        <a href="/home">  
-           <p>Done: Home Screen</p>  
-        </a> 
-        <a href="/create">  
-           <p>Back: Create Avatar</p>  
-        </a> 
-        <a href="/">  
-           <p>Quit: Index</p>  
-        </a> 
+    <div class="menu">
+    <ul>
+      <a href="/logout"><li>Logout</li></a>
+      <a href="/support"><li>Support</li></a>
+      <a href="/equipments"><li>Equipments</li></a>
+    </ul>
     </div>
+
+    <div class = "container">
+    <form class="pure-form pure-form-stacked">
+    <fieldset>
+        <legend>HP Configuration</legend>
+
+        <label for="income">Regular Income</label>
+        <input id="income" type="income" placeholder="Amount">
+
+        <label for="recurring">Recurring Expenses</label>
+        <select id="recurring">
+            <option>Rent</option>
+            <option>Utilities</option>
+            <option>Misc.</option>
+        </select>
+
+        <input id="recurring" type="recurring" placeholder="Amount">
+
+        
+    </fieldset>
+
+    <a href="/home" class="btn btn-primary btn-small">
+      Save</a>
+    <a href="/create" class="btn btn-primary btn-small">
+      Back</a>
+    <a href="/" class="btn btn-primary btn-small">
+      Quit</a>
+    
+    </form>
+    </div>
+		<div>
+      
+    </div>
+
 
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://code.jquery.com/jquery.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="/js/bootstrap.min.js"></script>
+    <script src="/js/introHCI.js"></script>
   </body>
 </html>
