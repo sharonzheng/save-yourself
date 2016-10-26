@@ -8,10 +8,22 @@ var http = require('http');
 var path = require('path');
 var handlebars = require('express3-handlebars')
 
-var index = require('./routes/index');
 // Example route
 // var user = require('./routes/user');
-var	project	=	require('./routes/project');
+// Route for all the pages
+var index = require('./routes/index');
+var	register = require('./routes/register');
+var	login =	require('./routes/login');
+var	create = require('./routes/create');
+var	hpconfig = require('./routes/hpconfig');
+var	home = require('./routes/home');
+var	input = require('./routes/input');
+var	analytics = require('./routes/analytics');
+var	logout = require('./routes/logout');
+var	support = require('./routes/support');
+var	equipments = require('./routes/equipments');
+var	shop = require('./routes/shop');
+
 
 var app = express();
 
@@ -36,10 +48,20 @@ if ('development' == app.get('env')) {
 }
 
 // Add routes here
-app.get('/', index.view);
 // Example route
 // app.get('/users', user.list);
-app.get('/project/:name',	project.viewProject);
+app.get('/', index.view);
+app.get('/register', register.view);
+app.get('/login', login.view);
+app.get('/create', create.view);
+app.get('/hpconfig', hpconfig.view);
+app.get('/home', home.view);
+app.get('/input', input.view);
+app.get('/analytics', analytics.view);
+app.get('/logout', logout.view);
+app.get('/support', support.view);
+app.get('/equipments', equipments.view);
+app.get('/shop', shop.view);
 
 http.createServer(app).listen(app.get('port'), function(){
   console.log('Express server listening on port ' + app.get('port'));
