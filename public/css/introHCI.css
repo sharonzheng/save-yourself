@@ -71,6 +71,12 @@ header{
   outline:none;
   z-index:10000000000000;
 }
+
+.btn{
+  background-color: black;
+  color:#ffffff;
+}
+
 .menu{z-index:1000000; font-weight:bold; font-size:0.8em; width:100%; background:#131313;  position:absolute; text-align:center;}
 .menu ul {margin: 0; padding: 0; list-style-type: none; list-style-image: none;}
 .menu li {display: block;   padding:15px 0 15px 0; border-bottom:#1d1f20 1px solid;}
