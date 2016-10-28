@@ -95,11 +95,14 @@ header{
 }
 
 .stats {
-  margin-top: 50px !important;
+  position: absolute; 
+  top: 60px;  
+  margin:10px;
+  left: 0;
 }
 
 .pet {
-  margin-top: 100px;
+  margin-top: 250px;
 }
 
 .input {
@@ -107,6 +110,13 @@ header{
   bottom:0;  
   margin:10px;
   right: 0;
+}
+
+.analytics {
+  position: absolute; 
+  bottom:0; 
+  margin:10px;
+  left: 0;
 }
 
 
