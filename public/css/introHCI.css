@@ -37,7 +37,7 @@
 /*new stuff*/
 header{
      width:100%; 
-     background:#1d1f20; 
+     background:#4ecd00; 
      height:60px; 
      line-height:60px;
 }
@@ -56,15 +56,16 @@ header{
   outline:none;
   z-index:10000000000000;
 }
+
 .cross{
   background:none;
   position:absolute;
-  top:0px;
+  top:0;
   right:0;
-  padding:13px 15px 0px 15px;
+  padding:5px 15px 0px 15px;
   color:#fff;
   border:0;
-  font-size:3em;
+  font-size:5em;
   line-height:65px;
   font-weight:bold;
   cursor:pointer;
@@ -73,16 +74,18 @@ header{
 }
 
 .btn{
-  background-color: black;
+  background-color: #5c3915;
   color:#ffffff;
+  font-weight: bold;
+  width: 100px;
 }
 
-.menu{z-index:1000000; font-weight:bold; font-size:0.8em; width:100%; background:#131313;  position:absolute; text-align:center;}
+.menu{z-index:1000000; font-weight:bold; font-size:1.5em; width:100%; background:#4ecd00;  position:absolute; text-align:center;}
 .menu ul {margin: 0; padding: 0; list-style-type: none; list-style-image: none;}
-.menu li {display: block;   padding:15px 0 15px 0; border-bottom:#1d1f20 1px solid;}
-.menu li:hover{display: block;    background:#181818; padding:15px 0 15px 0; border-bottom:#1d1f20 1px solid;}
+.menu li {display: block;   padding:15px 0 15px 0; font-family: 'Quicksand', sans-serif; font-weight: bold;}
+.menu li:hover{display: block; padding:15px 0 15px 0;}
 .menu ul li a { text-decoration:none;  margin: 0px; color:#fff;}
-.menu ul li a:hover {  color: #fff; text-decoration:none;}
+.menu ul li a:hover { color: #ffd35c; text-decoration:none;}
 .menu a{text-decoration:none; color:white;}
 .menu a:hover{text-decoration:none; color:white;}
 

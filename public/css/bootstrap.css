@@ -45,6 +45,11 @@ html {
 
 body {
   margin: 0;
+  background: url('/images/title.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
 }
 
 a {
@@ -303,7 +308,8 @@ html {
 }
 
 body {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: 'Quicksand', sans-serif;
+  font-weight: regular;
   font-size: 14px;
   line-height: 1.428571429;
   color: #333333;
@@ -786,6 +792,7 @@ pre code {
   padding-left: 15px;
   margin-right: auto;
   margin-left: auto;
+  margin-top:510px;
 }
 
 .container:before,
@@ -806,6 +813,25 @@ pre code {
 
 .container:after {
   clear: both;
+}
+
+.container p {
+  color: #ffffff;
+  line-height: 1.4em;
+}
+
+.container a{
+  color: #ffffff !important;
+  line-height: 1.4em;
+  font-weight: bold;
+  text-decoration: none;
+  border-bottom: 3px solid #65bb59;
+}
+
+.container a:hover{
+  text-decoration: none;
+  color: #ffd35c;
+  cursor:pointer;
 }
 
 @media (min-width: 768px) {
