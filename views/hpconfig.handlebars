@@ -4,7 +4,7 @@
     <title>HP Configuration</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Bootstrap -->
-    <link href="/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/css/bootstrap.css" rel="stylesheet">
     <link href="/css/bootstrap-theme.min.css" rel="stylesheet">
     <link href="/css/introHCI.css" rel="stylesheet">
 
@@ -26,35 +26,28 @@
 
     <div class="menu">
     <ul>
+      <a href="/"><li>Home</li></a>
       <a href="/support"><li>Support</li></a>
-      <a href="/equipments"><li>Equipments Menu</li></a>
-      <a href="/logout"><li>Logout</li></a>
     </ul>
     </div>
 
-    <div class = "container" style="text-align: center">
-          <legend>HP Configuration</legend>
-
-          <label for="income">Regular Income: </label><br>
-          <input id="income" type="income" placeholder="Amount"><br>
-
-          <label for="recurring">Recurring Expenses: </label><br>
-          <select id="dropdown">
-              <option>Rent</option>
-              <option>Utilities</option>
-              <option>Misc.</option>
-          </select><br>
-
-          <input id="recurring" type="recurring" placeholder="Amount"><br><br>  
+    <div class="signup" style="text-align: center">
+      <h1 class="header-title">HP Configuration</h1>
+      <p>Enter your regular income</p>
+      <input id="income" type="text" placeholder="$"><br><br>
+      <p>Enter your recurring expenses</p>
+      <select id="dropdown">
+          <option>Rent</option>
+          <option>Utilities</option>
+          <option>Misc.</option>
+      </select><br>
+      <input id="recurring" type="text" placeholder="$"><br><br><br>  
 
 
-      <a href="/home" class="btn">
-        Finish</a>
-      <a href="/create" class="btn">
-        Back</a>
-      <a href="/" class="btn">
-        Quit</a>
-      
+      <a href="/home" class="btn">Finish</a>
+      <a href="/" class="btn">Quit</a><br><br><br>
+
+      <a href="/create" class="login">Back</a>
     </div>
   </div>
 

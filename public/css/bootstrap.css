@@ -808,6 +808,8 @@ pre code {
   height: 500px;
   background-color: #89c65b;
   border-radius: 10px;
+  color: #ffffff;
+  font-weight: bold;
 }
 
 .signup img {
@@ -839,7 +841,7 @@ pre code {
   line-height: 1.4em;
 }
 
-.container a{
+.container a, .signup a{
   color: #ffffff !important;
   line-height: 1.4em;
   font-weight: bold;
@@ -847,7 +849,7 @@ pre code {
   border-bottom: 3px solid #65bb59;
 }
 
-.container a:hover{
+.container a:hover, .signup a:hover{
   text-decoration: none;
   color: #ffd35c;
   cursor:pointer;

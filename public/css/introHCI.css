@@ -86,10 +86,11 @@ header{
   color:#ffffff;
   font-weight: bold;
   width: 100px;
+  border-bottom: none !important;
 }
 
 .btn:hover,
-.btn:focus {
+.btn:focus, .btn a {
   color: #ffffff;
   background-color: #7a4d20;
   text-decoration: none;
@@ -146,8 +147,11 @@ input[type="text"], input[type="password"] {
   background-color: transparent;
   transition: border 0.3s;
   color: #ffffff;
-  width: 90%;
+  width: 60%;
   font-weight: bold;
+}
+input[id="income"], input[id="recurring"] {
+  width: 200px;
 }
 input[type="text"]:focus,
 input[type="text"].focus, 
