@@ -35,12 +35,20 @@
 }
 
 /*new stuff*/
+
 header{
      width:100%; 
      background:#4ecd00; 
      height:60px; 
      line-height:60px;
 }
+
+.header-title {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  text-align: center;
+}
+
 .hamburger{
   background:none;
   position:absolute;
@@ -120,6 +128,39 @@ header{
   bottom:0; 
   margin:10px;
   left: 0;
+}
+
+input[type="text"], input[type="password"] {
+  padding: 10px;
+  border: none;
+  border-bottom: solid 2px #89643e;
+  background-color: transparent;
+  transition: border 0.3s;
+  color: #ffffff;
+  width: 90%;
+  font-weight: bold;
+}
+input[type="text"]:focus,
+input[type="text"].focus, 
+input[type="password"]:focus,
+input[type="password"].focus {
+  border-bottom: solid 2px #5d3916;
+}
+::-webkit-input-placeholder {
+   color: #b0f57c;
+   font-weight: bold;
+}
+:-moz-placeholder { /* Firefox 18- */
+   color: #b0f57c;  
+   font-weight: bold;
+}
+::-moz-placeholder {  /* Firefox 19+ */
+   color: #b0f57c;  
+   font-weight: bold;
+}
+:-ms-input-placeholder {  
+   color: #b0f57c;  
+   font-weight: bold;
 }
 
 

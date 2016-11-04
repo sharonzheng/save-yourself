@@ -38,7 +38,7 @@ template {
 }
 
 html {
-  font-family: sans-serif;
+  font-family: 'Quicksand', sans-serif;
   -webkit-text-size-adjust: 100%;
       -ms-text-size-adjust: 100%;
 }
@@ -50,6 +50,7 @@ body {
   background-repeat: no-repeat;
   background-position: center center;
   background-attachment: fixed;
+  background-color: #79d93d;
 }
 
 a {
@@ -403,10 +404,10 @@ h6,
 .h4,
 .h5,
 .h6 {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-weight: 500;
+  font-family: 'Quicksand', sans-serif;
+  font-weight: bold;
   line-height: 1.1;
-  color: inherit;
+  color: #ffffff;
 }
 
 h1 small,
@@ -793,6 +794,19 @@ pre code {
   margin-right: auto;
   margin-left: auto;
   margin-top:510px;
+}
+
+.signup {
+  position: absolute;
+  margin: auto;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 400px;
+  height: 500px;
+  background-color: #89c65b;
+  border-radius: 10px;
 }
 
 .container:before,
@@ -6480,7 +6494,7 @@ button.close {
   height: 20px;
   margin-top: -10px;
   margin-left: -10px;
-  font-family: serif;
+  font-family: 'Quicksand', sans-serif;
 }
 
 .carousel-control .icon-prev:before {
