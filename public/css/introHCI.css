@@ -122,7 +122,9 @@ header{
 }
 
 .pet {
-  margin-top: 250px;
+  position: absolute;
+  bottom: 10px;
+  width: 100%;
 }
 
 .input {
@@ -147,7 +149,7 @@ input[type="text"], input[type="password"] {
   background-color: transparent;
   transition: border 0.3s;
   color: #ffffff;
-  width: 60%;
+  width: 90%;
   font-weight: bold;
 }
 input[id="income"], input[id="recurring"] {

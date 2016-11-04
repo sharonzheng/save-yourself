@@ -54,6 +54,17 @@ body {
   font-family: 'Quicksand', sans-serif;
 }
 
+body.home-page {
+  margin: 0;
+  background: url('/images/home_bg.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+  background-color: #79d93d;
+  font-family: 'Quicksand', sans-serif;
+}
+
 a {
   background: transparent;
 }
@@ -795,6 +806,13 @@ pre code {
   margin-right: auto;
   margin-left: auto;
   margin-top:510px;
+}
+
+.home-container {
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
 }
 
 .signup {

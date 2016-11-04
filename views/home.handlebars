@@ -4,7 +4,7 @@
     <title>Home</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Bootstrap -->
-    <link href="/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/css/bootstrap.css" rel="stylesheet">
     <link href="/css/bootstrap-theme.min.css" rel="stylesheet">
     <link href="/css/introHCI.css" rel="stylesheet">
 
@@ -16,46 +16,42 @@
     <![endif]-->
   </head>
 
-  <body>
+  <body class="home-page">
   <!-- this is a comment in HTML -->
   <div>
     <header>
+    {{#with user}}
+    <div align="center" style="font-weight: bold; color: white; font-size: 25px;">Welcome {{name}} !</div>
+    {{/with}}
     <button class="hamburger">&#9776;</button>
     <button class="cross">&#735;</button>
     </header>
 
     <div class="menu">
     <ul>
-        <li><a href="/support">Support Menu</a></li> 
-        <li><a href="/equipments">Equipments</a></li>
-        <li><a href="/logout">Logout</a></li>
+        <li><a href="/support">Support</a></li> 
+        <li><a href="/equipments">Equipment</a></li>
+        <li><a href="/logout">Log Out</a></li>
     </ul>
     </div>
 
-    <div class = "container">
-      {{#with user}}
+      
       <div class ="stats">
-      <p>HP <img src="/images/hp_bar.png"></p>
-      <p>XP <img src="/images/xp_bar.png"></p>
-      <p>Coins &nbsp; {{coins}}</p>
+      <img src="/images/info.png" width="150">
       </div>
 
-      <div align = "center"><p>Welcome {{name}} !</p></div>
-      {{/with}}
-      
       <div class = "pet">
-        <p align = "center"><img src="/images/pet.png"></p>
+        <p align = "center"><img src="/images/pet01.png" width="140"></p>
       </div>
 
       <div class = "input">
-        <p><a href="/input" class="btn">$</a></p>
+        <p><a href="/input"><img src="/images/input_btn.png" width="50"></a></p>
       </div>
 
       <div class = "analytics">
         <p><a href="/analytics" class="btn"><img src = "/images/analytics_button.png" width="24"></a></p>
       </div>
-      
-  </div>
+ 
 
 
 
