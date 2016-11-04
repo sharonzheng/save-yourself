@@ -88,6 +88,14 @@ header{
   width: 100px;
 }
 
+.btn:hover,
+.btn:focus {
+  color: #ffffff;
+  background-color: #7a4d20;
+  text-decoration: none;
+  cursor: pointer;
+}
+
 .menu{z-index:1000000; font-weight:bold; font-size:1.5em; width:100%; background:#4ecd00;  position:absolute; text-align:center;}
 .menu ul {margin: 0; padding: 0; list-style-type: none; list-style-image: none;}
 .menu li {display: block;   padding:15px 0 15px 0; font-family: 'Quicksand', sans-serif; font-weight: bold;}
@@ -130,6 +138,7 @@ header{
   left: 0;
 }
 
+/*  Input Field Styles */
 input[type="text"], input[type="password"] {
   padding: 10px;
   border: none;
