@@ -33,13 +33,16 @@
     </div>
 
     <div class = "container">
-
+      {{#with user}}
       <div class ="stats">
       <p>HP <img src="/images/hp_bar.png"></p>
       <p>XP <img src="/images/xp_bar.png"></p>
-      <p>Coins &nbsp;10,000</p>
+      <p>Coins &nbsp; {{coins}}</p>
       </div>
 
+      <div align = "center"><p>Welcome {{name}} !</p></div>
+      {{/with}}
+      
       <div class = "pet">
         <p align = "center"><img src="/images/pet.png"></p>
       </div>
