@@ -20,9 +20,9 @@
   <!-- this is a comment in HTML -->
   <div>
     <header>
-    {{#with user}}
+    {{#each user}}
     <div align="center" style="font-weight: bold; color: white; font-size: 25px;">Welcome {{name}} !</div>
-    {{/with}}
+    {{/each}}
     <button class="hamburger">&#9776;</button>
     <button class="cross">&#735;</button>
     </header>

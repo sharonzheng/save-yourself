@@ -1,8 +1,10 @@
 {
-	"user":
+	"user":[
 		{
+			"username": "TriciaPls",
+			"password": "CSE170",
 			"name": "Tricia",
-			"description": "Has awesome pet mice",
-			"coins": "10000"			
+			"coins": 10090			
 		}
+	]
 }

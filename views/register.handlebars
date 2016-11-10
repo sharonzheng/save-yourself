@@ -33,13 +33,15 @@
 
     <div class="signup" style="text-align: center">
       <h1 class="header-title">Create Account</h1>
-      <input type="text" placeholder="Username" class="focus"><br><br>
-      <input type="Password" placeholder="Password"><br>
-      <br><br><br>
-      <a href="/create" class="btn">
-        Confirm</a>
+      <form action="/register" method="post">
+      <input type="text" placeholder="Username" class="focus" id="username" name="username"><br><br>
+      <input type="Password" placeholder="Password" id="password" name="password"><br>
+      <br>
+      <input type="text" placeholder="Name" id="name" name="name"><br><br><br><br>
+      <input type="submit" value="Confirm">
       <a href="/" class="btn">
         Quit</a>
+      </form>
     </div>
 
 
