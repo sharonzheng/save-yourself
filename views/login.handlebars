@@ -33,13 +33,14 @@
 
     <div class="signup" style="text-align: center">
       <h1 class="header-title">Log into Account</h1>
-      <input type="text" placeholder="Username" class="focus"><br><br>
-      <input type="Password" placeholder="Password"><br>
+      <form action="/home" method="post">
+      <input type="text" placeholder="Username" class="focus" id="username" name="username"><br><br>
+      <input type="Password" placeholder="Password" id="password" name="password"><br>
       <br><br><br>
-      <a href="/home" class="btn">
-        Confirm</a>
+      <input type="submit" value="Login">
       <a href="/" class="btn">
         Quit</a>
+      </form>
     </div>
 
 

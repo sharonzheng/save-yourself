@@ -62,7 +62,10 @@ app.get('/logout', logout.view);
 app.get('/support', support.view);
 app.get('/equipments', equipments.view);
 app.get('/shop', shop.view);
+//app.post('/login',login.submit);
 app.post('/register',register.submit);
+app.post('/home', home.submit);
+app.post('/create',create.submit);
 
 http.createServer(app).listen(app.get('port'), function(){
   console.log('Express server listening on port ' + app.get('port'));
