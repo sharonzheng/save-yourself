@@ -3,5 +3,5 @@ exports.view =	function(req,	res)	{
 		res.render('create');
 }
 exports.submit = function(req,res){
-	
+	console.log("username" + req.body.username);
 }

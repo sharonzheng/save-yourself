@@ -8,5 +8,5 @@ exports.submit = function(req, res){
 	//console.log(req.body.username);
 	var info = {username: req.body.username, password:req.body.password, name: req.body.name, coins: 0};
 	data.user.push(info);
-	res.redirect('/home');
+	res.redirect('/create');
 }
