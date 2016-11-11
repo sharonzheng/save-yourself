@@ -4,7 +4,7 @@
     <title>Logout</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Bootstrap -->
-    <link href="/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/css/bootstrap.css" rel="stylesheet">
     <link href="/css/bootstrap-theme.min.css" rel="stylesheet">
     <link href="/css/introHCI.css" rel="stylesheet">
 
@@ -20,22 +20,23 @@
   <!-- this is a comment in HTML -->
   <div>
     <header>
+    <a href="/home"><button class="back"><</button></a>
     <button class="hamburger">&#9776;</button>
     <button class="cross">&#735;</button>
     </header>
 
     <div class="menu">
     <ul>
-      <a href="/support"><li>Support</li></a>
-      <a href="/equipments"><li>Equipments Menu</li></a>
-      <a href="/logout"><li>Logout</li></a>
+      <li><a href="/home">Home</a></li>
+      <li><a href="/analytics">Analytics</a></li>
+        <li><a href="/support">Support</a></li> 
     </ul>
     </div>
 
-    <div class = "container" style="text-align: center">
-      <legend>Are you sure you want to Logout?</legend> 
+    <div class = "signup" style="text-align: center">
+      <h3 class="header-title">Are you sure you want <br>to log out?</h3> 
       <form action = "/logout" method = "post">
-      <input type="submit" value="Confirm">
+      <input type="submit" value="Confirm" class= "btn">
 
       <a href="/home" class="btn">
         Back</a>
