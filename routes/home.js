@@ -19,15 +19,19 @@ exports.view =	function(req,	res)	{
 	if(inc <= 0){
 		console.log("pic3");
 		lul.user[lul.user.length-1].dog = '/images/RIP.png';
+		userinfo.user[userinfo.user.length-1].dog = '/images/RIP.png';
 		lul.user[lul.user.length-1].img1 = '/images/info3.png';
+		userinfo.user[userinfo.user.length-1].img1 = '/images/info3.png';
 	}
 	else if(inc < (init/4) ){
 		console.log("pic2");
 		lul.user[lul.user.length-1].img1 = '/images/info2.png';
+		userinfo.user[userinfo.user.length-1].img1 = '/images/info2.png';
 	}
 	else if(inc < init ){
 		console.log("pic1");
 		lul.user[lul.user.length-1].img1 = '/images/info1.png';
+		userinfo.user[userinfo.user.length-1].img1 = '/images/info1.png';
 	}
 
 	console.log("made ittttt");
@@ -42,7 +46,9 @@ exports.view =	function(req,	res)	{
 exports.submit = function (req, res) {
 
 	var dataFile = verifyLogin(req.body.username,req.body.password);
-    var dName = { user: [{name: dataFile}]};
+    
+    console.log("inside ");
+    console.log(userinfo.user[userinfo.user.length-1]);
 
     //console.log("name is "+lul.user);
     if(dataFile.length == 0){
@@ -50,6 +56,14 @@ exports.submit = function (req, res) {
     	res.render('login', { 'message': 'Wrong Login! Please try again!'});
     }
     else{
+    	var dName = { user: [ 
+	    	{
+	    	name: dataFile,
+	    	img1: userinfo.user[userinfo.user.length-1].img1,
+			dog: userinfo.user[userinfo.user.length-1].dog,
+			coins: userinfo.user[userinfo.user.length-1].coins
+	    	}]
+	    };
 		res.render('home', dName);
 	}
 }
@@ -59,7 +73,7 @@ function verifyLogin(username, password){
 		if(data.user[i].username == username){
 			if(data.user[i].password == password){
 				userinfo.user.push(data.user[i]);
-				return data.user[i].name;
+				return data.user[i].username;
 			}
 		}
 	}
