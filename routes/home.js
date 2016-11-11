@@ -8,7 +8,8 @@ exports.view =	function(req,	res)	{
 		password : data.user[data.user.length-1].password,
 		name: data.user[data.user.length-1].name,
 		img1: '/images/info.png',
-		dog: userinfo.user[userinfo.user.length-1].dog
+		dog: userinfo.user[userinfo.user.length-1].dog,
+		coins: userinfo.user[userinfo.user.length-1].coins
 		}]
 	};
 
