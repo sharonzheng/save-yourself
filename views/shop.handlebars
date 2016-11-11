@@ -55,8 +55,10 @@
       <h1>Preview</h1>
       <img id="img" name="change" src="/images/dog.gif" width="180">
       <p>Accessories</p>
+      <form method="post" action="/shop" name="myForm" data ="{{data}}">
       <p><img src="/images/acc_collar.png" alt="" id="imgClickAndChange" onclick="changeImage()" width="120"></p>
-      <p><a href="/home" class="btn">Buy</a></p>
+      <p><input type="submit" value="Confirm"></p>
+      </form>
     </div>
 
 

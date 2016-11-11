@@ -12,15 +12,20 @@ exports.submit = function(req, res){
 		password:req.body.password, 
 		name: req.body.name,
 		pet: "dog",
+		initial: 0,
 		income: 0, 
 		coins: 0,
 		rent: 0,
 		util: 0,
 		misc: 0,
 		total: 0,
+		num: 0,
+		img1: '/images/info.png',
+		dog: '/images/dog.gif',
 		inputs: []};
 	userinfo.user.push(info);
 	data.user.push(info);
 	res.redirect('/create');
 }
+
 

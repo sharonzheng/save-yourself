@@ -35,16 +35,18 @@
     </ul>
     </div>
 
-      
+      {{#each user}}
       <div class ="stats">
-      <img src="/images/info.png" width="150">
+      <img src= {{img1}} width="150"/>
       </div>
+      
 
       <div class = "pet">
         <p align = "center">
-          <a href="/shop"><img src="/images/dog.gif" width="300"></a>
+          <a href="/shop"><img src={{dog}} width="300"></a>
         </p>
       </div>
+      {{/each}}
 
       <div class = "input">
         <p><a href="/input"><img src="/images/input_btn.png" width="50"></a></p>
