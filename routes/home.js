@@ -11,7 +11,7 @@ exports.view =	function(req,	res)	{
 	};
 	console.log("made ittttt");
 	console.log(userinfo.user[userinfo.user.length-1].username);
-		res.render('home', lul);
+	res.render('home', lul);
 }
 //loop thru data obj to find the name that matches the username
 /*exports.submit = function(res, req){
