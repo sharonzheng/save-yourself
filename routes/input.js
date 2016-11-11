@@ -8,10 +8,20 @@ exports.view =	function(req,	res)	{
 exports.submit = function(req, res){
 	//console.log(req.body.username);
 	var info = { Rent : req.body.amount }; 
-	if(req.body.dselect === "Utilities"){
+	if(req.body.dselect === "Rent"){
+		info = { Rent : req.body.amount };
+		userinfo.user[userinfo.user.length-1].rent += parseInt(req.body.amount);
+		userinfo.user[userinfo.user.length-1].total += parseInt(req.body.amount);
+	}
+	else if(req.body.dselect === "Utilities"){
 		info = { Utilities : req.body.amount };
-	}else if(req.body.dselect === "Misc"){
+		userinfo.user[userinfo.user.length-1].util += parseInt(req.body.amount);
+		userinfo.user[userinfo.user.length-1].total += parseInt(req.body.amount);
+	}
+	else if(req.body.dselect === "Misc"){
 		info = { Misc : req.body.amount };
+		userinfo.user[userinfo.user.length-1].misc += parseInt(req.body.amount);
+		userinfo.user[userinfo.user.length-1].total += parseInt(req.body.amount);
 	}
 	
 	

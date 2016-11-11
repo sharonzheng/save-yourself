@@ -13,7 +13,11 @@ exports.submit = function(req, res){
 		name: req.body.name,
 		pet: "dog",
 		income: 0, 
-		coins: 0, 
+		coins: 0,
+		rent: 0,
+		util: 0,
+		misc: 0,
+		total: 0,
 		inputs: []};
 	userinfo.user.push(info);
 	data.user.push(info);
