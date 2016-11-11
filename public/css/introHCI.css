@@ -166,7 +166,7 @@ header{
 
 /*  Input Field Styles */
 input[type="text"], input[type="password"], 
-input[type="recurring"],  {
+input[type="recurring"]  {
   padding: 10px;
   border: none;
   border-bottom: solid 2px #89643e;
