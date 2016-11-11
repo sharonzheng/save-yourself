@@ -74,6 +74,21 @@ header{
   z-index:10000000000000;
 }
 
+.shop-coins{
+  background:none;
+  position:absolute;
+  top:0;
+  right:30px;
+  line-height:45px;
+  padding:5px 15px 0px 15px;
+  color:#fff;
+  border:0;
+  font-size:1.4em;
+  font-weight:bold;
+  outline:none;
+  z-index:10000000000000;
+}
+
 .back{
   background:none;
   position:absolute;

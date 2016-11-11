@@ -36,11 +36,14 @@
   <!-- this is a comment in HTML -->
   <div>
     <header>
+    {{#each user}}
     <div align="center" style="font-weight: bold; color: white; font-size: 25px;">Shop</div>
+    <div class="shop-coins"><img src="/images/coin.png" style ="margin-top: -5px;" height="22px">&nbsp;{{coins}}</div>
     <button class="hamburger">&#9776;</button>
     <a href="/home"><button class="back"><</button></a>
     <button class="cross">&#735;</button>
     </header>
+    {{/each}}
 
     <div class="menu">
     <ul>
@@ -51,8 +54,9 @@
     </ul>
     </div>
 
+    
     <div class="container-shop" style="text-align: center">
-      <h1>Preview</h1>
+      <h1 class="header-title">Preview</h1>
       <img id="img" name="change" src="/images/dog.gif" width="180">
       <p>Accessories</p>
       <form method="post" action="/shop" name="myForm" data ="{{data}}">
@@ -60,6 +64,7 @@
       <p><input type="submit" value="Buy" class="btn"></p>
       </form>
     </div>
+    
 
 
 
