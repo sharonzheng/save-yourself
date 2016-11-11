@@ -73,7 +73,7 @@ function verifyLogin(username, password){
 		if(data.user[i].username == username){
 			if(data.user[i].password == password){
 				userinfo.user.push(data.user[i]);
-				return data.user[i].username;
+				return data.user[i].name;
 			}
 		}
 	}
