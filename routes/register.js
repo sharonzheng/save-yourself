@@ -11,10 +11,12 @@ exports.submit = function(req, res){
 	var info = {username: req.body.username, 
 		password:req.body.password, 
 		name: req.body.name,
-		pet: "dog", 
+		pet: "dog",
+		income: 0, 
 		coins: 0, 
 		inputs: []};
 	userinfo.user.push(info);
 	data.user.push(info);
 	res.redirect('/create');
 }
+

@@ -34,17 +34,19 @@
     <div class="signup" style="text-align: center">
       <h1 class="header-title">HP Configuration</h1>
       <p>Enter your regular income</p>
-      <input id="income" type="text" placeholder="$"><br><br>
+      <form method="post" action="/hpconfig" name="myForm" data ="{{data}}">
+      <input id="income" type="text" placeholder="$" name ="income"><br><br>
       <p>Enter your recurring expenses</p>
-      <select id="dropdown">
+      <select name ="dselect" id="dropdown">
           <option>Rent</option>
           <option>Utilities</option>
-          <option>Misc.</option>
+          <option>Misc</option>
       </select><br>
-      <input id="recurring" type="text" placeholder="$"><br><br><br>  
+      <input name ="amount" id="recurring" type="text" placeholder="$"><br><br><br>  
 
 
-      <a href="/home" class="btn">Finish</a>
+      <input type="submit" value="Confirm">
+      </form>
       <a href="/" class="btn">Quit</a><br><br><br>
 
       <a href="/create" class="login">Back</a>
