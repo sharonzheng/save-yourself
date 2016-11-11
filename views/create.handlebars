@@ -48,7 +48,7 @@
 
       <div id="pet">
         <form method="post" action="/create" name="myForm" data ="{{data}}">
-        <select name="switchimg" onchange="switchImage();">
+        <select name="switch" onchange="switchImage();">
             <option value="1">Dog</option>
             <option value="2">Cat</option>
         </select> 
@@ -57,7 +57,7 @@
 
       <img src="images/pet01.png" name="myImage" />
       <br><br><br>
-      <input type="submit" value="Confirm">
+      <input type="submit" value="Confirm" class="btn">
       </form>
       <a href="/" class="btn">Quit</a>
     </div>

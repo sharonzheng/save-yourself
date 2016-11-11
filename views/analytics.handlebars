@@ -16,13 +16,17 @@
     <![endif]-->
 
     <script type="text/javascript">
+
+    
   window.onload = function () {
     // initial values of dataPoints
+
     var dps = [
-    {label: "Rent", y: 500}  ,
+    {label: "Rent", y: 40},
     {label: "Utilities", y: 60},
     {label: "Misc", y: 100}
     ];
+
     var totalAmount = "Total Amount Spent: $660";
 
     var chart = new CanvasJS.Chart("chartContainer",{
@@ -52,31 +56,6 @@
     // renders initial chart
     chart.render();
 
-    var sum = 660;   //initial sum 
-
-    var updateInterval = 1000;  // milliseconds
-
-    var updateChart = function () {
-      // Selecting a random dataPoint
-      var dataPointIndex = Math.round(Math.random()*4);   
-
-      // generating random value
-      var deltaY = Math.round(2 + Math.random() *(-2-2)); 
-
-      // adding random value to random dataPoint
-      dps[dataPointIndex].y = (dps[dataPointIndex].y + deltaY) > 0 ? dps[dataPointIndex].y + deltaY : 0 ;
-
-      // updating legend text. 
-      sum = sum + deltaY;
-      totalAmount = "Total Amount Spent: $" + sum;      
-      chart.options.data[0].legendText = totalAmount;  
-
-      chart.render();
-
-    };
-      // update chart after specified interval
-      setInterval(function(){updateChart()}, updateInterval);
-
     } 
     </script>
   </head>
@@ -86,7 +65,6 @@
   <div>
     <header>
     <div align="center" style="font-weight: bold; color: white; font-size: 25px;">Analytics</div>
-
     <button class="hamburger">&#9776;</button>
     <a href="/home"><button class="back"><</button></a>
     <button class="cross">&#735;</button>
@@ -103,11 +81,6 @@
     <div class="container-analytics" style="text-align: center">    
       <div id="chartContainer" style="height: 300px; width: 100%;">
       </div>
-      {{#each user}}
-      <br>
-      heeeelo {{name}}
-      <br>
-      {{/each}}
     </div>
 
 
@@ -118,5 +91,6 @@
     <script src="/js/bootstrap.min.js"></script>
     <script src="/js/introHCI.js"></script>
     <script src="/js/jquery.canvasjs.min.js"></script>
+    <script type="text/javascript" src="data.json"></script>
   </body>
 </html>
