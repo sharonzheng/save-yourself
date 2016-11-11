@@ -48,16 +48,17 @@
 
       <div id="pet">
         <form method="post" action="/create" name="myForm" data ="{{data}}">
-        <select name="switch" onchange="switchImage();">
+        <select name="switchimg" onchange="switchImage();">
             <option value="1">Dog</option>
             <option value="2">Cat</option>
         </select> 
-        </form>
+        
       </div><br>
 
       <img src="images/pet01.png" name="myImage" />
       <br><br><br>
-      <a href="/hpconfig" class="btn">Next</a>
+      <input type="submit" value="Confirm">
+      </form>
       <a href="/" class="btn">Quit</a>
     </div>
 

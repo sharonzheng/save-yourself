@@ -8,7 +8,12 @@ exports.view =	function(req,	res)	{
 
 exports.submit = function(req, res){
 	//console.log(req.body.username);
-	var info = {username: req.body.username, password:req.body.password, name: req.body.name, coins: 0, inputs: []};
+	var info = {username: req.body.username, 
+		password:req.body.password, 
+		name: req.body.name,
+		pet: "dog", 
+		coins: 0, 
+		inputs: []};
 	userinfo.user.push(info);
 	data.user.push(info);
 	res.redirect('/create');
