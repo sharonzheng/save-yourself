@@ -14,7 +14,7 @@ exports.submit = function(req, res){
 		userinfo.user[userinfo.user.length-1].rent += parseInt(req.body.amount);
 		userinfo.user[userinfo.user.length-1].total += parseInt(req.body.amount);
 		userinfo.user[userinfo.user.length-1].income -= parseInt(req.body.amount);
-		userinfo.user[userinfo.user.length-1].coins += 100;
+		userinfo.user[userinfo.user.length-1].coins += 500;
 		userinfo.user[userinfo.user.length-1].num++;
 	}
 	else if(req.body.dselect === "Utilities"){
@@ -22,7 +22,7 @@ exports.submit = function(req, res){
 		userinfo.user[userinfo.user.length-1].util += parseInt(req.body.amount);
 		userinfo.user[userinfo.user.length-1].total += parseInt(req.body.amount);
 		userinfo.user[userinfo.user.length-1].income -= parseInt(req.body.amount);
-		userinfo.user[userinfo.user.length-1].coins += 100;
+		userinfo.user[userinfo.user.length-1].coins += 500;
 		userinfo.user[userinfo.user.length-1].num++;
 	}
 	else if(req.body.dselect === "Misc"){
@@ -30,7 +30,7 @@ exports.submit = function(req, res){
 		userinfo.user[userinfo.user.length-1].misc += parseInt(req.body.amount);
 		userinfo.user[userinfo.user.length-1].total += parseInt(req.body.amount);
 		userinfo.user[userinfo.user.length-1].income -= parseInt(req.body.amount);
-		userinfo.user[userinfo.user.length-1].coins += 100;
+		userinfo.user[userinfo.user.length-1].coins += 500;
 		userinfo.user[userinfo.user.length-1].num++;
 	}
 	
