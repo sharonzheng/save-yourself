@@ -39,6 +39,9 @@
 
     <div class="signup" style="text-align: center">
     <h2 class="header-title">Category</h2>
+    {{#with user}}
+      <div><p>hii{{name}}</p></div>
+      {{/with }}
     <form action="/input" method="post">
       <select name="dselect" id="dropdown">
           <option>Rent</option>
@@ -48,6 +51,8 @@
       <input id="recurring" type="text" placeholder="$" name="amount"><br><br> 
       <input type="submit" class="btn" value="Confirm">
       </form>
+
+      
     </div>
   </div>
 

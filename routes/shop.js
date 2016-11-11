@@ -1,7 +1,7 @@
 userinfo = require('../userinfo.json');
 
 exports.view	=	function(req,	res){	
-	res.render('shop');	
+	res.render('shop',userinfo);	
 }
 
 exports.submit = function(req,res){
