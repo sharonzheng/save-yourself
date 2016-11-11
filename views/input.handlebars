@@ -34,15 +34,17 @@
 
     <div class = "container" style="text-align: center">
           <legend>Input Expenses</legend>
-
+          <form action="/input" method="post">
           <label for="recurring">Catgory: </label><br>
-          <select id="dropdown">
+          <select name="dselect" id="dropdown">
               <option>Rent</option>
               <option>Utilities</option>
-              <option>Misc.</option>
+              <option>Misc</option>
           </select><br>
-          <label for="recurring">Amount: </label><br>
-          <input id="recurring" type="recurring" placeholder="Amount"><br><br>  
+          <label for="amount">Amount: </label><br>
+          <input id="amount" type="recurring" placeholder="Amount" name="amount"><br><br> 
+          <input type="submit" value="Confirm">
+          </form>
 
 
       <a href="/input" class="btn">

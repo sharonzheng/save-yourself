@@ -1,4 +1,5 @@
 var data = require('../data.json');
+var userinfo = require('../userinfo.json');
 
 exports.view =	function(req,	res)	{
 	var lul = { user: [
@@ -6,8 +7,10 @@ exports.view =	function(req,	res)	{
 		username : data.user[data.user.length-1].username,
 		password : data.user[data.user.length-1].password,
 		name: data.user[data.user.length-1].name
-	}]
-};
+		}]
+	};
+	console.log("made ittttt");
+	console.log(userinfo.user[userinfo.user.length-1].username);
 		res.render('home', lul);
 }
 //loop thru data obj to find the name that matches the username
@@ -34,6 +37,7 @@ function verifyLogin(username, password){
 	for(var i = 0; i < data.user.length; i++){
 		if(data.user[i].username == username){
 			if(data.user[i].password == password){
+				userinfo.user.push(data.user[i]);
 				return data.user[i].name;
 			}
 		}

@@ -4,7 +4,8 @@
 			"username": "TriciaPls",
 			"password": "CSE170",
 			"name": "Tricia",
-			"coins": 10090			
+			"coins": 10090,
+			"expenses": [ {"misc": 10} ]			
 		}
 	]
 }
