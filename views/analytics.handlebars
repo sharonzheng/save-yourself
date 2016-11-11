@@ -4,7 +4,7 @@
     <title>Analytics</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Bootstrap -->
-    <link href="/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/css/bootstrap.css" rel="stylesheet">
     <link href="/css/bootstrap-theme.min.css" rel="stylesheet">
     <link href="/css/introHCI.css" rel="stylesheet">
 
@@ -14,32 +14,95 @@
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
       <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
     <![endif]-->
+
+    <script type="text/javascript">
+  window.onload = function () {
+    // initial values of dataPoints
+    var dps = [
+    {label: "Rent", y: 500}  ,
+    {label: "Utilities", y: 60},
+    {label: "Misc", y: 100}
+    ];
+    var totalAmount = "Total Amount Spent: $660";
+
+    var chart = new CanvasJS.Chart("chartContainer",{
+      theme: "theme2",
+      title:{ 
+        text: ""
+      },
+      axisY: {        
+        title: "Amount"
+      },          
+      legend:{
+        verticalAlign: "top",
+        horizontalAlign: "centre",
+        fontSize: 18
+
+      },
+      data : [{
+        type: "column",
+        showInLegend: true,
+        legendMarkerType: "none",       
+        legendText: totalAmount,
+        indexLabel: "{y}",
+        dataPoints: dps
+      }]
+    });
+
+    // renders initial chart
+    chart.render();
+
+    var sum = 660;   //initial sum 
+
+    var updateInterval = 1000;  // milliseconds
+
+    var updateChart = function () {
+      // Selecting a random dataPoint
+      var dataPointIndex = Math.round(Math.random()*4);   
+
+      // generating random value
+      var deltaY = Math.round(2 + Math.random() *(-2-2)); 
+
+      // adding random value to random dataPoint
+      dps[dataPointIndex].y = (dps[dataPointIndex].y + deltaY) > 0 ? dps[dataPointIndex].y + deltaY : 0 ;
+
+      // updating legend text. 
+      sum = sum + deltaY;
+      totalAmount = "Total Amount Spent: $" + sum;      
+      chart.options.data[0].legendText = totalAmount;  
+
+      chart.render();
+
+    };
+      // update chart after specified interval
+      setInterval(function(){updateChart()}, updateInterval);
+
+    } 
+    </script>
   </head>
 
-  <body>
+   <body class="analytics-page">
   <!-- this is a comment in HTML -->
   <div>
     <header>
+    <div align="center" style="font-weight: bold; color: white; font-size: 25px;">Analytics</div>
     <button class="hamburger">&#9776;</button>
+    <a href="/home"><button class="back"><</button></a>
     <button class="cross">&#735;</button>
     </header>
 
     <div class="menu">
     <ul>
-      <a href="/support"><li>Support</li></a>
-      <a href="/equipments"><li>Equipments Menu</li></a>
-      <a href="/logout"><li>Logout</li></a>
+        <li><a href="/home">Home</a></li>
+        <li><a href="/support">Support</a></li> 
+        <li><a href="/logout">Log Out</a></li>
     </ul>
     </div>
 
-    <div class = "container" style="text-align: center">
-      <legend>Analytics</legend> 
-
-      <a href="/home" class="btn">
-        Back</a>
-      
+    <div class="container-analytics" style="text-align: center">    
+      <div id="chartContainer" style="height: 300px; width: 100%;">
+      </div>
     </div>
-  </div>
 
 
 
@@ -48,5 +111,6 @@
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="/js/bootstrap.min.js"></script>
     <script src="/js/introHCI.js"></script>
+    <script src="/js/jquery.canvasjs.min.js"></script>
   </body>
 </html>

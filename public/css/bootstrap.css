@@ -65,6 +65,13 @@ body.home-page {
   font-family: 'Quicksand', sans-serif;
 }
 
+body.analytics-page {
+  margin: 0;
+  background-image: none;
+  background-color: #fff;
+  font-family: 'Quicksand', sans-serif;
+}
+
 a {
   background: transparent;
 }
@@ -827,6 +834,36 @@ pre code {
   background-color: #89c65b;
   border-radius: 10px;
   color: #ffffff;
+  font-weight: bold;
+}
+
+.container-shop {
+  position: absolute;
+  margin: auto;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 400px;
+  height: 500px;
+  background-color: #89c65b;
+  border-radius: 10px;
+  color: #ffffff;
+  font-weight: bold;
+}
+
+.container-analytics {
+  position: absolute;
+  margin: auto;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 400px;
+  height: 500px;
+  background-color: #fff;
+  border-radius: 10px;
+  color: #7e4e22;
   font-weight: bold;
 }
 

@@ -49,11 +49,34 @@ header{
   text-align: center;
 }
 
+.header-title-dark {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  text-align: center;
+  color: #4ecd00;
+}
+
 .hamburger{
   background:none;
   position:absolute;
   top:0;
   right:0;
+  line-height:45px;
+  padding:5px 15px 0px 15px;
+  color:#fff;
+  border:0;
+  font-size:1.4em;
+  font-weight:bold;
+  cursor:pointer;
+  outline:none;
+  z-index:10000000000000;
+}
+
+.back{
+  background:none;
+  position:absolute;
+  top:0;
+  left:0;
   line-height:45px;
   padding:5px 15px 0px 15px;
   color:#fff;
@@ -199,5 +222,8 @@ select:active {
 }
 #pet {
     margin: 20px;
+}
+.canvasjs-chart-credit {
+   display: none;
 }
 

@@ -4,7 +4,7 @@
     <title>Shop</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Bootstrap -->
-    <link href="/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/css/bootstrap.css" rel="stylesheet">
     <link href="/css/bootstrap-theme.min.css" rel="stylesheet">
     <link href="/css/introHCI.css" rel="stylesheet">
 
@@ -14,32 +14,50 @@
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
       <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
     <![endif]-->
+
+    <script>
+      var action = 1;
+      function changeImage() {
+        if (action == 1) {
+          document.getElementById("img").src="/images/dog_custom.gif";
+          action = 2;
+        }
+        else {
+          document.getElementById("img").src="/images/dog.gif";
+          action = 1;
+        }
+
+        
+      }
+    </script>
   </head>
 
   <body>
   <!-- this is a comment in HTML -->
   <div>
     <header>
+    <div align="center" style="font-weight: bold; color: white; font-size: 25px;">Shop</div>
     <button class="hamburger">&#9776;</button>
+    <a href="/home"><button class="back"><</button></a>
     <button class="cross">&#735;</button>
     </header>
 
     <div class="menu">
     <ul>
-      <a href="/support"><li>Support</li></a>
-      <a href="/equipments"><li>Equipments Menu</li></a>
-      <a href="/logout"><li>Logout</li></a>
+        <li><a href="/home">Home</a></li>
+        <li><a href="/analytics">Analytics</a></li> 
+        <li><a href="/support">Support</a></li> 
+        <li><a href="/logout">Log Out</a></li>
     </ul>
     </div>
 
-    <div class = "container" style="text-align: center">
-      <legend>Shop</legend> 
-
-      <a href="/equipments" class="btn">
-        Back</a>
-      
+    <div class="container-shop" style="text-align: center">
+      <h1>Preview</h1>
+      <img id="img" name="change" src="/images/dog.gif" width="180">
+      <p>Accessories</p>
+      <p><img src="/images/acc_collar.png" alt="" id="imgClickAndChange" onclick="changeImage()" width="120"></p>
+      <p><a href="/home" class="btn">Buy</a></p>
     </div>
-  </div>
 
 
 
