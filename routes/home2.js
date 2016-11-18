@@ -26,19 +26,10 @@ exports.view =	function(req,	res)	{
 		lul.user[lul.user.length-1].hp = 0;
 		userinfo.user[userinfo.user.length-1].hp= 0;
 	}
-	else if(inc < (init/4) ){
-		console.log("pic2");
-		lul.user[lul.user.length-1].img1 = '/images/info2.png';
-		userinfo.user[userinfo.user.length-1].img1 = '/images/info2.png';
-		lul.user[lul.user.length-1].hp = 20;
-		userinfo.user[userinfo.user.length-1].hp = 20;
-	}
-	else if(inc < init ){
+	else {
 		console.log("pic1");
-		lul.user[lul.user.length-1].img1 = '/images/info1.png';
-		userinfo.user[userinfo.user.length-1].img1 = '/images/info1.png';
-		lul.user[lul.user.length-1].hp = 80;
-		userinfo.user[userinfo.user.length-1].hp = 80;
+		lul.user[lul.user.length-1].hp = (inc / init) * 100;
+		userinfo.user[userinfo.user.length-1].hp = (inc / init) * 100;
 	}
 
 	console.log("made ittttt");
