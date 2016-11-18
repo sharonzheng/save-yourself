@@ -40,16 +40,16 @@
 
     <div class="signup" style="text-align: center">
     <h2 class="header-title">Category</h2>
-    {{#with user}}
-      <!-- <div><p>hii{{name}}</p></div> -->
-      {{/with }}
+    <div id="wronglogin"></div>
     <form action="/input" method="post">
       <select name="dselect" id="dropdown">
           <option>Rent</option>
           <option>Utilities</option>
           <option>Misc</option>
       </select><br><br>
-      <input id="recurring" type="text" placeholder="$" name="amount"><br><br> 
+
+      <input id="recurring" type="text" placeholder="$" name="amount"><br><br>
+       <p> {{warning}} </p> 
       <input type="submit" class="btn" value="Confirm">
       </form>
 

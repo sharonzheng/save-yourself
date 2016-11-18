@@ -38,12 +38,14 @@
       <form method="post" action="/hpconfig" name="myForm" data ="{{data}}">
       <input id="income" type="text" placeholder="$" name ="income"><br><br>
       <p>Enter your expenses</p>
-      <select name ="dselect" id="dropdown">
-          <option>Rent</option>
-          <option>Utilities</option>
-          <option>Misc</option>
-      </select><br>
-      <input name ="amount" id="recurring" type="text" placeholder="$"><br><br><br>
+
+          <label>Rent:</label>
+          <input name ="rentamt" id="recurring" type="text" placeholder="$"><br>
+          <label>Utilities:</label>
+          <input name ="utilamt" id="recurring" type="text" placeholder="$"><br>
+          <label>Misc:</label>
+          <input name ="miscamt" id="recurring" type="text" placeholder="$"><br>
+     <br><br>
       <input type="submit" value="Confirm" class="btn">  
       <a href="/" class="btn">Quit</a>
       </form>

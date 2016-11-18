@@ -80,8 +80,3 @@ function verifyLogin(username, password){
 	return "";
 }
 
-function wrongLogin(result){
-	var message = 
-	'<p>Wrong username/password. Please try again!</p>';
-	$('#wronglogin').html(message);
-}
