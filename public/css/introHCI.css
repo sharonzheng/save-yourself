@@ -181,6 +181,13 @@ header{
   right: 0;
 }
 
+.shop-button {
+  position: absolute; 
+  bottom:0;  
+  margin:10px;
+  left: 0;
+}
+
 .analytics {
   position: absolute; 
   bottom:0; 
