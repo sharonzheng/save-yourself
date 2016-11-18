@@ -34,6 +34,9 @@
 
     <div class="signup" style="text-align: center">
       <h1 class="header-title">HP Configuration</h1>
+      {{#each user}}
+      <div>{{warning}}</div>
+      {{/each}}
       <p>Enter your monthly income</p>
       <form method="post" action="/hpconfig" name="myForm" data ="{{data}}">
       <input id="income" type="text" placeholder="$" name ="income"><br><br>
