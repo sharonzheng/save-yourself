@@ -23,6 +23,7 @@ var	logout = require('./routes/logout');
 var	support = require('./routes/support');
 var	equipments = require('./routes/equipments');
 var	shop = require('./routes/shop');
+var home2 = require('./routes/home2');
 
 
 var app = express();
@@ -62,9 +63,11 @@ app.get('/logout', logout.view);
 app.get('/support', support.view);
 app.get('/equipments', equipments.view);
 app.get('/shop', shop.view);
+app.get('/home2', home2.view);
 //app.post('/login',login.submit);
 app.post('/register',register.submit);
 app.post('/home', home.submit);
+app.post('/hom2',home2.submit);
 app.post('/create',create.submit);
 app.post('/input',input.submit);
 app.post('/logout',logout.submit);
