@@ -38,8 +38,13 @@
 
       {{#each user}}
       <div class ="stats">
-      <div class="coins header-title">{{coins}}</div>
-      <img src= {{img1}} width="150"/>
+      <p>HP:</p>
+      <div class="progress">
+        <div id ="health" class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="{{hp}}" aria-valuemin="0" aria-valuemax="100" style="width: {{hp}}%;">
+          </div>
+        </div>
+        <p>Coins: <br>{{coins}}</p>
+        <!-- <img src= {{img1}} width="150"/> -->
       </div>
       
 

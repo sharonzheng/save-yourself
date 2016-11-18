@@ -9,7 +9,8 @@ exports.view =	function(req,	res)	{
 		name: data.user[data.user.length-1].name,
 		img1: '/images/info.png',
 		dog: userinfo.user[userinfo.user.length-1].dog,
-		coins: userinfo.user[userinfo.user.length-1].coins
+		coins: userinfo.user[userinfo.user.length-1].coins,
+		hp: userinfo.user[userinfo.user.length-1].hp
 		}]
 	};
 
@@ -22,16 +23,22 @@ exports.view =	function(req,	res)	{
 		userinfo.user[userinfo.user.length-1].dog = '/images/RIP.png';
 		lul.user[lul.user.length-1].img1 = '/images/info3.png';
 		userinfo.user[userinfo.user.length-1].img1 = '/images/info3.png';
+		lul.user[lul.user.length-1].hp = 0;
+		userinfo.user[userinfo.user.length-1].hp= 0;
 	}
 	else if(inc < (init/4) ){
 		console.log("pic2");
 		lul.user[lul.user.length-1].img1 = '/images/info2.png';
 		userinfo.user[userinfo.user.length-1].img1 = '/images/info2.png';
+		lul.user[lul.user.length-1].hp = 20;
+		userinfo.user[userinfo.user.length-1].hp = 20;
 	}
 	else if(inc < init ){
 		console.log("pic1");
 		lul.user[lul.user.length-1].img1 = '/images/info1.png';
 		userinfo.user[userinfo.user.length-1].img1 = '/images/info1.png';
+		lul.user[lul.user.length-1].hp = 80;
+		userinfo.user[userinfo.user.length-1].hp = 80;
 	}
 
 	console.log("made ittttt");
