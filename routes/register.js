@@ -22,6 +22,7 @@ exports.submit = function(req, res){
 		num: 0,
 		img1: '/images/info.png',
 		dog: '/images/dog.gif',
+		hp: 100,
 		inputs: []};
 	userinfo.user.push(info);
 	data.user.push(info);
