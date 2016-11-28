@@ -47,13 +47,24 @@
         <p>Coins: <br>{{coins}}</p>
         <!-- <img src= {{img1}} width="150"/> -->
       </div>
-      
 
+      {{#if showAlternate}}
+      <div class = "pet">
+        <p align = "center">
+          <img src={{dog}} width="300">
+        </p>
+      </div>
+      <div class = "shop-button">
+        <p><a href="/shop"><img src="/images/shop_button.png" width="80"></a></p>
+      </div>
+      {{else}}
       <div class = "pet">
         <p align = "center">
           <a href="/shop"><img src={{dog}} width="300"></a>
         </p>
       </div>
+      {{/if}}
+
       {{/each}}
 
       <div class = "input">
@@ -72,5 +83,15 @@
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="/js/bootstrap.min.js"></script>
     <script src="/js/introHCI.js"></script>
+    <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-88076750-1', 'auto');
+    ga('send', 'pageview');
+
+    </script>
   </body>
 </html>

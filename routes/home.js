@@ -10,7 +10,8 @@ exports.view =	function(req,	res)	{
 		img1: '/images/info.png',
 		dog: userinfo.user[userinfo.user.length-1].dog,
 		coins: userinfo.user[userinfo.user.length-1].coins,
-		hp: userinfo.user[userinfo.user.length-1].hp
+		hp: userinfo.user[userinfo.user.length-1].hp,
+		showAlternate: false
 		}]
 	};
 
@@ -33,14 +34,48 @@ exports.view =	function(req,	res)	{
 	userinfo.user[userinfo.user.length-1].hp = 80;
 	}
 
-	console.log("made ittttt");
-	console.log(userinfo.user[userinfo.user.length-1].username);
 	res.render('home', lul);
 }
 //loop thru data obj to find the name that matches the username
 /*exports.submit = function(res, req){
 
 }*/
+
+exports.viewHome2 =	function(req,	res)	{
+	var lul = { user: [
+		{
+		username : data.user[data.user.length-1].username,
+		password : data.user[data.user.length-1].password,
+		name: data.user[data.user.length-1].name,
+		img1: '/images/info.png',
+		dog: userinfo.user[userinfo.user.length-1].dog,
+		coins: userinfo.user[userinfo.user.length-1].coins,
+		hp: userinfo.user[userinfo.user.length-1].hp,
+		showAlternate: true
+		}]
+	};
+
+	var inc = userinfo.user[userinfo.user.length-1].income;
+	var init = userinfo.user[userinfo.user.length-1].initial;
+	var spent = userinfo.user[userinfo.user.length-1].total;
+	if(inc <= 0){
+		console.log("pic3");
+		lul.user[lul.user.length-1].dog = '/images/RIP.png';
+		userinfo.user[userinfo.user.length-1].dog = '/images/RIP.png';
+		lul.user[lul.user.length-1].img1 = '/images/info3.png';
+		userinfo.user[userinfo.user.length-1].img1 = '/images/info3.png';
+		lul.user[lul.user.length-1].hp = 0;
+		userinfo.user[userinfo.user.length-1].hp= 0;
+	}
+	else {
+		console.log("pic1");
+		lul.user[lul.user.length-1].hp = (inc / init) * 100;
+		userinfo.user[userinfo.user.length-1].hp = (inc / init) * 100;
+	userinfo.user[userinfo.user.length-1].hp = 80;
+	}
+
+	res.render('home2', lul);
+}
 
 exports.submit = function (req, res) {
 
