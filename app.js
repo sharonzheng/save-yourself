@@ -24,7 +24,7 @@ var	support = require('./routes/support');
 var	equipments = require('./routes/equipments');
 var	shop = require('./routes/shop');
 var home2 = require('./routes/home2');
-
+var settings = require('./routes/settings');
 
 var app = express();
 
@@ -64,6 +64,7 @@ app.get('/logout', logout.view);
 app.get('/support', support.view);
 app.get('/equipments', equipments.view);
 app.get('/shop', shop.view);
+app.get('/settings', settings.view);
 
 //app.post('/login',login.submit);
 app.post('/register',register.submit);
