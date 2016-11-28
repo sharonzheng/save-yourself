@@ -25,6 +25,7 @@ var	equipments = require('./routes/equipments');
 var	shop = require('./routes/shop');
 var home2 = require('./routes/home2');
 var settings = require('./routes/settings');
+var edit = require('./routes/edit');
 
 var app = express();
 
@@ -65,6 +66,8 @@ app.get('/support', support.view);
 app.get('/equipments', equipments.view);
 app.get('/shop', shop.view);
 app.get('/settings', settings.view);
+app.get('/edit', edit.view);
+
 
 //app.post('/login',login.submit);
 app.post('/register',register.submit);
@@ -75,6 +78,7 @@ app.post('/input',input.submit);
 app.post('/logout',logout.submit);
 app.post('/hpconfig',hpconfig.submit);
 app.post('/shop',shop.submit);
+app.post('/edit',edit.submit);
 
 http.createServer(app).listen(app.get('port'), function(){
   console.log('Express server listening on port ' + app.get('port'));

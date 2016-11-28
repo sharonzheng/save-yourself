@@ -22,25 +22,28 @@
 	<div>
     <header>
     <button class="hamburger">&#9776;</button>
+    <a href="/settings">
+    <button type ="backbtn" name ="backbtn" class="back"><</button>
+    </a>
     <button class="cross">&#735;</button>
     </header>
 
     <div class="menu">
     <ul>
-      <a href="/"><li>Home</li></a>
-      <a href="/support"><li>Support</li></a>
+      <li><a href="/home">Home</a></li> 
+      <li><a href="/analytics">Analytics</a></li> 
+      <li><a href="/support">Support</a></li> 
+      <li><a href="/settings">Settings</a></li> 
+      <li><a href="/logout">Log Out</a></li>
     </ul>
     </div>
 
     <div class="signup" style="text-align: center">
-      <h1 class="header-title">HP Configuration</h1>
-      {{#each user}}
-      <div>{{warning}}</div>
-      {{/each}}
+      <h1 class="header-title">Edit Settings</h1>
       <p>Enter your monthly income</p>
-      <form method="post" action="/hpconfig" name="myForm" data ="{{data}}">
+      <form method="post" action="/edit" name="myForm" data ="{{data}}">
       <input id="income" type="text" placeholder="$" name ="income"><br><br>
-      <p>Enter your expenses</p>
+      <p>Enter your recurring expenses</p>
 
           <label>Rent:</label>
           <input name ="rentamt" id="recurring" type="text" placeholder="$"><br>
@@ -49,12 +52,9 @@
           <label>Misc:</label>
           <input name ="miscamt" id="recurring" type="text" placeholder="$"><br>
      <br><br>
-      <input type="submit" value="Confirm" class="btn">  
-      <a href="/" class="btn">Quit</a>
+      <input type="submit" value="Save" class="btn">  
       </form>
 <br><br>
-
-      <a href="/create" class="login">Back</a>
     </div>
   </div>
 
