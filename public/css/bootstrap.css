@@ -808,11 +808,13 @@ pre code {
 }
 
 .container {
-  padding-right: 15px;
-  padding-left: 15px;
-  margin-right: auto;
-  margin-left: auto;
-  margin-top:510px;
+  margin: auto 0;
+  position: absolute;
+  left: 0;
+  right: 0;
+  width: 100%;
+  bottom: 15%;
+  text-align: center;
 }
 
 .home-container {
