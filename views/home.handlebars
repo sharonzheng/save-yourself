@@ -70,8 +70,8 @@
           <img src={{dog}} width="300">
         </p>
       </div>
-      <div class = "shop-button">
-        <p><a href="/shop" onclick="ga('send', 'event', 'button', 'click');"><img src="/images/shop_button.png" width="80"></a></p>
+      <div class = "shop-button" id = "shoptrack">
+        <p><a href="/shop" ><img src="/images/shop_button.png" width="80"></a></p>
       </div>
       {{else}}
       <div class = "pet">
@@ -108,6 +108,13 @@
     ga('create', 'UA-88076750-1', 'auto');
     ga('send', 'pageview');
 
+    </script>
+    <script>
+      document.getElementById("shoptrack").addEventListener("click", 
+        function(){
+          console.log("sent event");
+          ga('send', 'event', 'button', 'click');
+        });
     </script>
   </body>
 </html>
