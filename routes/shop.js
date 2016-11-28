@@ -10,7 +10,7 @@ exports.submit = function(req,res){
 		userinfo.user[userinfo.user.length-1].warning = 'You cannot purchase anything your pet is dead :(';
 		res.render('shop',userinfo);
 	}
-	else if(userinfo.user[userinfo.user.length-1].coins <= 0){
+	else if(userinfo.user[userinfo.user.length-1].coins < 1000){
 		userinfo.user[userinfo.user.length-1].warning = 'You have insufficient coins to purchase this item.';
 		res.render('shop',userinfo);
 	}
