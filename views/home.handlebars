@@ -71,7 +71,7 @@
         </p>
       </div>
       <div class = "shop-button" id = "shoptrack">
-        <p><a href="/shop" ><img src="/images/shop_button.png" width="80"></a></p>
+        <p><a href="/shop"><img src="/images/shop_button.png" width="80"></a></p>
       </div>
       {{else}}
       <div class = "pet">
@@ -110,11 +110,14 @@
 
     </script>
     <script>
-      document.getElementById("shoptrack").addEventListener("click", 
+      var check = document.getElementById("shoptrack");
+      if(check){
+        check.addEventListener("click", 
         function(){
           console.log("sent event");
           ga('send', 'event', 'button', 'click');
         });
+      }
     </script>
   </body>
 </html>
