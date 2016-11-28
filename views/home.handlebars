@@ -1,6 +1,22 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <!-- Google Analytics Content Experiment code -->
+    <script>function utmx_section(){}function utmx(){}(function(){var
+    k='134704093-1',d=document,l=d.location,c=d.cookie;
+    if(l.search.indexOf('utm_expid='+k)>0)return;
+    function f(n){if(c){var i=c.indexOf(n+'=');if(i>-1){var j=c.
+    indexOf(';',i);return escape(c.substring(i+n.length+1,j<0?c.
+    length:j))}}}var x=f('__utmx'),xx=f('__utmxx'),h=l.hash;d.write(
+    '<sc'+'ript src="'+'http'+(l.protocol=='https:'?'s://ssl':
+    '://www')+'.google-analytics.com/ga_exp.js?'+'utmxkey='+k+
+    '&utmx='+(x?x:'')+'&utmxx='+(xx?xx:'')+'&utmxtime='+new Date().
+    valueOf()+(h?'&utmxhash='+escape(h.substr(1)):'')+
+    '" type="text/javascript" charset="utf-8"><\/sc'+'ript>')})();
+    </script><script>utmx('url','A/B');</script>
+    <!-- End of Google Analytics Content Experiment code -->
+
+
     <title>Home</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Bootstrap -->
@@ -54,11 +70,11 @@
           <img src={{dog}} width="300">
         </p>
       </div>
-      <div class = "shop-button">
+      <div class = "shop-button" id = "shoptrack">
         <p><a href="/shop"><img src="/images/shop_button.png" width="80"></a></p>
       </div>
       {{else}}
-      <div class = "pet">
+      <div class = "pet" id = "shoptrack">
         <p align = "center">
           <a href="/shop"><img src={{dog}} width="300"></a>
         </p>
@@ -92,6 +108,16 @@
     ga('create', 'UA-88076750-1', 'auto');
     ga('send', 'pageview');
 
+    </script>
+    <script>
+      var check = document.getElementById("shoptrack");
+      if(check){
+        check.addEventListener("click", 
+        function(){
+          console.log("sent event");
+          ga('send', 'event', 'button', 'click');
+        });
+      }
     </script>
   </body>
 </html>
