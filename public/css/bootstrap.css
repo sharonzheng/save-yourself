@@ -808,12 +808,14 @@ pre code {
 }
 
 .container {
-  margin: auto 0;
   position: absolute;
-  left: 0;
   right: 0;
-  width: 100%;
-  bottom: 15%;
+  bottom: 0;
+  left: 0;
+  padding: 1rem;
+  margin-right: auto;
+  margin-left: auto;
+  margin-bottom: 30px;
   text-align: center;
 }
 
